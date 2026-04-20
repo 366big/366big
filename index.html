@@ -348,7 +348,11 @@ body {
   border-radius:10px;
   cursor:pointer;
 }
-
+.no-crop img {
+  aspect-ratio:auto !important;   /* 🔥 비율 강제 제거 */
+  object-fit:contain !important;  /* 🔥 안잘리게 */
+  height:auto !important;
+}
 
 .gallery {display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 .gallery-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;}
@@ -954,9 +958,9 @@ Tiles & TC allowed (flexible)
 
 </div>
 
-<div class="img-row-2">
-<img src="img3.jpg">
-<img src="img4.jpg">
+<div class="img-row-2 no-crop">
+  <img src="img3.jpg">
+  <img src="img4.jpg">
 </div>
 </div>
 
